@@ -9,6 +9,12 @@ android {
         versionCode         version_code
         versionName         version_name
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+            }
+        }
     }
     buildTypes {
         release {
@@ -45,6 +51,9 @@ dependencies {
     implementation deps.autodispose.ad
     implementation deps.autodispose.android
     implementation deps.autodispose.arch
-    implementation deps.rxpermission
+    implementation deps.rxpermissions
+
+    implementation      deps.arouter_api
+    annotationProcessor deps.arouter_compiler
     implementation project(':base')
 }

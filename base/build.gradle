@@ -11,6 +11,12 @@ android {
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+            }
+        }
+
     }
 
     buildTypes {
@@ -45,6 +51,10 @@ dependencies {
     implementation deps.autodispose.ad
     implementation deps.autodispose.android
     implementation deps.autodispose.arch
+
+    implementation      deps.arouter_api
+    annotationProcessor deps.arouter_compiler
+
     testImplementation deps.junit
     androidTestImplementation deps.runner
     androidTestImplementation deps.espresso

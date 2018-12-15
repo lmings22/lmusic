@@ -3,18 +3,20 @@ def deps = [:]
 
 def versions = [:]
 
-versions.junit    = "4.12"
-versions.runner   = "1.0.2"
-versions.espresso = "3.0.2"
-versions.support  = "28.0.0"
-versions.constraint_layout = "1.1.3"
-versions.butterknife = "8.8.1"
-versions.okhttp      = "3.10.0"
-versions.retrofit    = "2.4.0"
-versions.rxjava      = "2.1.12"
-versions.rxandroid   = "2.0.2"
-versions.autodispose = "0.7.0"
-versions.rxpermission= "0.10.2"
+versions.junit              = "4.12"
+versions.runner             = "1.0.2"
+versions.espresso           = "3.0.2"
+versions.support            = "28.0.0"
+versions.constraint_layout  = "1.1.3"
+versions.butterknife        = "8.8.1"
+versions.okhttp             = "3.10.0"
+versions.retrofit           = "2.4.0"
+versions.rxjava             = "2.1.12"
+versions.rxandroid          = "2.0.2"
+versions.autodispose        = "0.7.0"
+versions.rxpermissions      = "0.10.2"
+versions.arouter_api        = "1.4.1"
+versions.arouter_compiler   = "1.2.2"
 deps.versions = versions
 
 def support = [:]
@@ -50,7 +52,12 @@ autodispose.android = "com.uber.autodispose:autodispose-android:$versions.autodi
 autodispose.arch    = "com.uber.autodispose:autodispose-android-archcomponents:$versions.autodispose"
 deps.autodispose = autodispose
 
-deps.rxpermission = "com.github.tbruyelle:rxpermissions:$versions.rxpermission"
+//RxPermissions
+deps.rxpermissions = "com.github.tbruyelle:rxpermissions:$versions.rxpermissions"
+
+//ARouter
+deps.arouter_api      = "com.alibaba:arouter-api:$versions.arouter_api"
+deps.arouter_compiler = "com.alibaba:arouter-compiler:$versions.arouter_compiler"
 
 //test
 deps.junit    = "junit:junit:$versions.junit"
