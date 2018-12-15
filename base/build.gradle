@@ -1,0 +1,54 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion       compile_sdk_version
+
+    defaultConfig {
+        minSdkVersion       min_sdk_version
+        targetSdkVersion    target_sdk_version
+        versionCode         version_code
+        versionName         version_name
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation              deps.support.app_compat
+
+    //butterknife
+    implementation              deps.butterknife
+    annotationProcessor         deps.butterknife_compiler
+
+    //net
+    implementation              deps.net.okhttp
+    implementation              deps.net.log_interceptor
+    implementation              deps.net.retrofit
+    implementation              deps.net.convert_gson
+    implementation              deps.net.adapter_rxjava
+
+    //rxjava
+    implementation              deps.rxjava
+    implementation              deps.rxandroid
+
+    //autodispose
+    implementation              deps.autodispose.ad
+    implementation              deps.autodispose.android
+    implementation              deps.autodispose.arch
+
+
+    testImplementation          deps.junit
+    androidTestImplementation   deps.runner
+    androidTestImplementation   deps.espresso
+}
