@@ -8,8 +8,8 @@ import com.uber.autodispose.AutoDispose;
 import com.uber.autodispose.AutoDisposeConverter;
 import com.uber.autodispose.android.lifecycle.AndroidLifecycleScopeProvider;
 
-import base.necmusic.lmings22.com.ui.Presenter.BasePresenter;
-import base.necmusic.lmings22.com.ui.View.BaseView;
+import base.lmings22.com.ui.Presenter.BasePresenter;
+import base.lmings22.com.ui.View.BaseView;
 
 public abstract class BaseMvpActivity<T extends BasePresenter> extends BaseActivity implements BaseView{
     protected T presenter;

@@ -20,35 +20,32 @@ android {
         }
     }
 
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-
-    implementation              deps.support.app_compat
-
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation deps.support.app_compat
     //butterknife
-    implementation              deps.butterknife
-    annotationProcessor         deps.butterknife_compiler
-
+    implementation deps.butterknife
+    annotationProcessor deps.butterknife_compiler
     //net
-    implementation              deps.net.okhttp
-    implementation              deps.net.log_interceptor
-    implementation              deps.net.retrofit
-    implementation              deps.net.convert_gson
-    implementation              deps.net.adapter_rxjava
-
+    implementation deps.net.okhttp
+    implementation deps.net.log_interceptor
+    implementation deps.net.retrofit
+    implementation deps.net.convert_gson
+    implementation deps.net.adapter_rxjava
     //rxjava
-    implementation              deps.rxjava
-    implementation              deps.rxandroid
-
+    implementation deps.rxjava
+    implementation deps.rxandroid
     //autodispose
-    implementation              deps.autodispose.ad
-    implementation              deps.autodispose.android
-    implementation              deps.autodispose.arch
-
-
-    testImplementation          deps.junit
-    androidTestImplementation   deps.runner
-    androidTestImplementation   deps.espresso
+    implementation deps.autodispose.ad
+    implementation deps.autodispose.android
+    implementation deps.autodispose.arch
+    testImplementation deps.junit
+    androidTestImplementation deps.runner
+    androidTestImplementation deps.espresso
 }

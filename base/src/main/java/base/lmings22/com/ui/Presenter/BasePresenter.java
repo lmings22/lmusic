@@ -1,6 +1,6 @@
 package base.lmings22.com.ui.Presenter;
 
-import base.necmusic.lmings22.com.ui.View.BaseView;
+import base.lmings22.com.ui.View.BaseView;
 
 public class BasePresenter<V extends BaseView> {
     protected V view;

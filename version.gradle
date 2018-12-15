@@ -9,11 +9,12 @@ versions.espresso = "3.0.2"
 versions.support  = "28.0.0"
 versions.constraint_layout = "1.1.3"
 versions.butterknife = "8.8.1"
-versions.okhttp   = "3.10.0"
-versions.retrofit = "2.4.0"
-versions.rxjava    = "2.1.12"
-versions.rxandroid = "2.0.2"
+versions.okhttp      = "3.10.0"
+versions.retrofit    = "2.4.0"
+versions.rxjava      = "2.1.12"
+versions.rxandroid   = "2.0.2"
 versions.autodispose = "0.7.0"
+versions.rxpermission= "0.10.2"
 deps.versions = versions
 
 def support = [:]
@@ -48,6 +49,8 @@ autodispose.ad      = "com.uber.autodispose:autodispose:$versions.autodispose"
 autodispose.android = "com.uber.autodispose:autodispose-android:$versions.autodispose"
 autodispose.arch    = "com.uber.autodispose:autodispose-android-archcomponents:$versions.autodispose"
 deps.autodispose = autodispose
+
+deps.rxpermission = "com.github.tbruyelle:rxpermissions:$versions.rxpermission"
 
 //test
 deps.junit    = "junit:junit:$versions.junit"
