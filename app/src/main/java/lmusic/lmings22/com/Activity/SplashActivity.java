@@ -60,7 +60,7 @@ public class SplashActivity extends BaseActivity {
     public void runMainActivity() {
         new Handler().postDelayed(() -> {
             ARouter.getInstance()
-                    .build("/activity/main")
+                    .build("/activity/home")
                     .navigation();
                 },3000);
 
